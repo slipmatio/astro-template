@@ -1,3 +1,4 @@
+import sitemap from "@astrojs/sitemap";
 import vue from "@astrojs/vue";
 import tailwind from "@tailwindcss/vite";
 import { unheadVueComposablesImports } from "@unhead/vue";
@@ -14,11 +15,16 @@ if (process.env.NODE_ENV === "production") {
 
 // https://astro.build/config
 export default defineConfig({
+	site: "https://next.slipmat.io",
+
 	prefetch: {
 		prefetchAll: true,
 		defaultStrategy: "viewport",
 	},
-	integrations: [vue({ appEntrypoint: "/src/app.ts", devtools: true })],
+	integrations: [
+		vue({ appEntrypoint: "/src/app.ts", devtools: true }),
+		sitemap(),
+	],
 	vite: {
 		plugins: [
 			tailwind(),
