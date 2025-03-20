@@ -7,7 +7,7 @@ const api = axios.create({
 })
 
 const versionString =
-  import.meta.env.MODE === 'development' ? import.meta.env.VITE_APP_VERSION + '-dev' : import.meta.env.VITE_APP_VERSION
+  import.meta.env.MODE === 'development' ? `${import.meta.env.VITE_APP_VERSION}-dev` : import.meta.env.VITE_APP_VERSION
 
 export const useStore = defineStore('main', {
   state: () => ({
@@ -23,10 +23,9 @@ export const useStore = defineStore('main', {
           console.log('App already initialized')
         }
         return
-      } else {
-        if (this.debug) {
-          console.log('Initing store')
-        }
+      }
+      if (this.debug) {
+        console.log('Initing store')
       }
       this.isInitialized = true
     },
