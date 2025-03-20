@@ -37,4 +37,4 @@ jobs:
       #   run: pnpm ts
 
       - name: Build
-        run: pnpm vite build
+        run: pnpm build
