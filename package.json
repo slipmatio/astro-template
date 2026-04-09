@@ -14,7 +14,7 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/sitemap": "^3.3.0",
     "@astrojs/vue": "^6.0.0",
-    "@unhead/vue": "2.1.12",
+    "@unhead/vue": "2.1.13",
     "astro": "^6.0.0",
     "axios": "^1.8.4",
     "pinia": "^3.0.1",
